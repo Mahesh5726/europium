@@ -13,3 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Contact {
+  id String @id @default(uuid())
+  name String
+  phoneNumber String @unique
+  email String @unique
+}
